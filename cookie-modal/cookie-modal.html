@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Cookie modal</title>
+  </head>
+
+  <body>
+
+    <div class="fixed-bottom p-4">
+      <div class="toast bg-dark text-white w-100 mw-100" role="alert" data-autohide="false">
+        <div class="toast-body p-4 d-flex flex-column">
+          <h4>Cookie Warning</h4>
+          <p>
+            This website stores data such as cookies to enable site functionality including analytics and
+            personalization.
+            By using this website, you automatically accept that we use cookies.
+          </p>
+          <div class="ml-auto">
+            <button type="button" class="btn btn-outline-light mr-3" id="btnDeny">
+              Deny
+            </button>
+            <button type="button" class="btn btn-light" id="btnAccept">
+              Accept
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- page content -->
+    <div class="container py-4">
+      <h1 class="font-weight-light"> Welcome To Essence </h1>
+    </div>
+
+
+    <script>
+      $(document).ready(function () {
+        function generateCode() {
+          let code = '';
+          for (let i = 0; i < 16; i++) {
+            code += Math.floor(Math.random() * 10);
+          }
+          return code;
+        }
+        var cookieData = {
+          Id: generateCode(),
+          Token: generateCode()
+        }
+        // var cookieData = {
+        //   Id: Math.floor(Math.random() * 10),
+        //   Token: Math.floor(Math.random() * 10)
+        // }
+
+        var newStringData = btoa(JSON.stringify(cookieData));
+        checkData()
+
+
+        function checkData() {
+
+          if (localStorage.getItem("mydata34")) {
+            var outputData = JSON.parse(atob(localStorage.getItem("mydata34")))
+            var x = Object.keys(outputData)
+            console.log(x)
+            console.log("data already present")
+          } else {
+            $('.toast').toast('show')
+          }
+        }
+
+        $('#btnDeny').click(() => {
+          $('.toast').toast('hide')
+        })
+
+        $('#btnAccept').click(() => {
+          setCookie()
+          $('.toast').toast('hide')
+        })
+
+        function setCookie() {
+          var flag = false;
+          localStorage.setItem("mydata34", newStringData)
+        }
+      })
+    </script>
+
+  </body>
+
+</html>

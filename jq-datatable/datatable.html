@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/data-tabel.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+    <title>Document</title>
+
+  </head>
+
+  <body>
+    <!-- ----------------------without api custom table-------------- -->
+    <div id="box-table">
+
+      <table id="myTable" class="table-striped">
+        <thead>
+          <tr class="table-primary">
+            <th class="table-primary">No</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Status</th>
+            <th>Status</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>16/12/2022</td>
+            <td>Earning</td>
+            <td>Hold balance release</td>
+            <td>Account credit</td>
+            <td style="color: #00B907;">$10</td>
+          </tr>
+
+
+          <tr>
+            <td>2</td>
+            <td>16/12/2022</td>
+            <td>Withdraw</td>
+            <td>Contest won(ID-19654)</td>
+            <td>Account credit</td>
+            <td style="color: #00B907;">$130</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>24/11/2022</td>
+            <td>Earning</td>
+            <td>Payment successful</td>
+            <td>PayPal</td>
+            <td style="color: #FF0000;">$110</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>22/11/2022</td>
+            <td>Earning</td>
+            <td>Hold balance release</td>
+            <td>Account credit</td>
+            <td style="color: #00B907;">$10</td>
+          </tr>
+          <tr style="border-bottom: none;">
+            <td>5</td>
+            <td>22/11/2022</td>
+            <td>Earning</td>
+            <td>Contest won(ID-19831)</td>
+            <td>Account credit</td>
+            <td style="color: #00B907;">$100</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script type="text/javascript" charset="utf8"
+      src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#myTable').DataTable();
+      });
+    </script>
+
+
+
+    <!-- with API table--------------------------- -->
+    <!-- <table id="example" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Extn.</th>
+          <th>Start date</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Extn.</th>
+          <th>Start date</th>
+          <th>Salary</th>
+        </tr>
+      </tfoot>
+    </table>
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <script src="./data-table--js/dat-table.js"></script>
+    <script  src="./jquery-2.2.4.js"></script>
+ -->
+
+    <!-- <script type="text/javascript" charset="utf8"
+      src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#myTable').DataTable();
+        $("#btn").click(function () {
+
+        })
+      });
+    </script> -->
+  </body>
+
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button class="btn1" onclick="function1()">alphabaticaly sort</button>
+    <button class="btn2" onclick="function2()">asending order</button>
+    <p> <span id="demo">YOUR ANSWER IS :</span></p>
+    <form action="">
+      <input type="number" name="n" id="enterNum" />
+    </form>
+    <div id="result"></div>
+
+    <!-- *************even-odd-input field************ -->
+    Enter your numbers:<input type="text" name="array[]" id="input-number">
+    <button onclick="show()">answer</button><br>
+    <p id="answer"></p>
+    <script>
+      // const arr = ["Banana", "Orange", "Apple", "Mango"]
+      // arr.pop("mango");
+      // console.log(arr);
+      // arr.unshift("kiwi");
+      // console.log(arr);
+      // arr[arr.length] = "papaya";
+      // console.log(arr);
+
+      // const arr1 = ["Cecilie", "Lone"];
+      // const arr2 = ["Emil", "Tobias", "Linus"];
+      // const arr3 = ["Robin", "Morgan"];
+      // const a = arr1.concat(arr2, arr3);
+      // const b = [...arr1, ...arr2, ...arr3];
+      // console.log(a);
+      // console.log(b);
+
+
+      // const num = [12, 13, 112, 44, 43, 30, 40];
+      // var c = num.slice(2, 5);
+      // console.log(c);
+
+      // var d = num.splice(2, 3, 1024, 1040, 1050)
+      // console.log(d);
+      // console.log(num);
+
+
+      // const arr = ["Banana", "Orange", "Apple", "Mango"]
+      // let f = arr.toString()
+      // console.log(f);
+      // const num2 = [1, 3, 2, 215, 2202]
+      // let g = num2.join()
+      // console.log(g)
+
+      // const num2 = [1, 3, 2, 215, 2202]
+
+      // function function1() {
+      //   num2.sort()
+      //   console.log(num2);
+      // };
+
+
+      // const num2 = [1, 3, 2, 215, 2202]
+      // function function2() {
+      //   num2.sort(function (a, b) {
+      //     return a - b;
+      //   })
+      //   console.log(num2[0]);
+      //   console.log(num2[num2.length - 1]);
+      // }
+
+      // const num2 = [1, 3, 2, 215, 2202]
+      // num2.sort()
+      // num2.reverse()
+      // console.log(num2);
+      // it gives decending order of  sring array not  for num
+
+      // Math.ceil.random().floor.round()____________practice
+
+      // var array = [' 68 ', ' 69 ', ' 71 ', ' 72 '];
+      // var randomIndex = Math.floor(Math.random() * array.length);
+      // console.log(randomIndex)
+
+
+      // const points = [40, 100, 1, 5, 25, 10];
+      // $("#demo").text(myArrayMin(points));
+
+      // function myArrayMin(arr) {
+      //   let len = arr.length;
+      //   let min = Infinity;
+      //   while (len--) {
+      //     if (arr[len] < min) {
+      //       min = arr[len];
+      //     }
+      //   }
+      //   return min;
+      // }
+      // function myArrayMin(arr) {
+      //   let len = arr.length;
+      //   let min = -Infinity;
+      //   while (len--) {
+      //     if (arr[len] > min) {
+      //       min = arr[len];
+      //     }
+      //   }
+      //   return min;
+      // }
+
+      // let text = "Please visit Microsoft!";
+      // let newText = text.replace("Microsoft", "google");
+      // console.log(newText)
+
+      // let text1 = "Hello";
+      // let text2 = "World";
+      // let text3 = text1.concat(" ", text2);
+      // console.log(text3)
+
+
+      // let text1 = "      Hello World!      ";
+      // let text2 = text1.trim();
+      // console.log(text2)
+
+
+      // let text2 = "Please locate where 'locate' occurs!";
+      // $("#demo").text(text2.indexOf("locate"));
+      // $("#demo").text(text2.lastIndexOf("locate"));
+      // $("#demo").text(text2.search("locate"));
+
+      // let text5 = "The rain in SPAIN stays mainly in the plain";
+      // const myArr = text5.match(/ain/g);
+      // $("#demo").text(myArr.length + " " + myArr);
+
+      // const myArr = text5.match(/ain/gi);
+      // $("#demo").text(myArr.length + " " + myArr);
+
+      // const myArr = text5.match("ain");
+      // $("#demo").text(myArr.length + " " + myArr);
+
+      //  In  matchAll repeat same Property
+
+
+      // let text = "Hello world, welcome to the universe.";
+      // let e = text.includes("world", 12);
+      // console.log(e)
+      // *********************************************
+      // const obj = {
+      //   key: "123",
+      //   data: "NISHA",
+      //   value: "essnece"
+      // }
+      // obj.data = "KISHAN";
+      // console.log(obj)
+      // +++++++++++++++++++++++++++++object value change*************/
+
+
+      // arr = [
+      //   {
+      //     key: "123",
+      //     data: "NISHA",
+      //     value: "essnece"
+      //   },
+      //   {
+      //     key: "123",
+      //     data: "NImiSHA",
+      //     value: "essnece"
+      //   },
+      //   {
+      //     key: "123",
+      //     data: "MANISHA",
+      //     value: "essnece"
+      //   }
+
+      // ]
+
+      // const updatedKeyData = arr.map((element) => {
+      //     return { ...element, data:"kishan"}
+      //   })
+      //   console.log(updatedKeyData)
+
+      // *******************************************
+      // functionArryObj()
+      // newArr = [];
+      // for (let i in arr) {
+      //   var y = arr[i].key;
+      //   console.log(arr)
+      //   function function1(y) {
+      //     y = $("#enterNum").val();
+      //     newArr.push(y);
+      //     console.log(newArr)
+      //   }
+      // }
+
+      // **********************prime number**********************
+      // input value given by input feild*********************
+      // function function1() {
+      //   let x = true;
+      //   let n
+      //   n = $("#enterNum").val();
+      //   a = parseInt(n);
+      //   for (let i = 2; i < a; i++) {
+      //     if (a % i == 0) {
+      //       x = false;
+      //       break;
+      //     }
+      //   }
+      //   if (x == true) {
+      //     console.log(a + "number is prime");
+      //   }
+      //   else {
+      //     console.log(a + "number is not prime");
+      //   }
+      // }
+      // ************************************by passing value in function1***********
+      // function function1(n) {
+      //   let x = true;
+      //   for (let i = 2; i < n; i++) {
+      //     if (n % i == 0) {
+      //       x = false;
+      //       break;
+      //     }
+      //   }
+      //   if (x == true) {
+      //     console.log(n + "number is prime");
+      //   }
+      //   else {
+      //     console.log(n + "number is not prime");
+      //   }
+      // }
+
+      // function1(17);
+      // *********************************rest operator***************
+      // const rest = function function3(first_name, last_name, ...other_info) {
+
+      //   return other_info[0];
+      // }
+      // rest("Oluwatobi", "Sofela", "CodeSweetly", "Web Developer", "Male")
+      // console.log(rest)
+      // *********************************spread  operator***************
+
+      // function myBio(firstName, lastName, company) {
+      //   return `${firstName} ${lastName} runs ${company}`;
+      // }
+      // console.log(myBio(...["Oluwatobi", "Sofela", "CodeSweetly"]))
+
+      // ******************************entries and keys********************
+      // const obj = {
+      //   id: "123",
+      //   data: "NISHA",
+      //   value: "essnece"
+      // }
+      // var a = Object.keys(obj)
+      // console.log(a)
+
+
+      // array = [];
+      // const Arr3 = [
+      //   {
+      //     id: "1",
+      //     data: "NISHA1",
+      //     value: "essnece1"
+      //   },
+      //   {
+      //     id: "12",
+      //     data: "NISHA2",
+      //     value: "essnece2"
+      //   },
+      //   {
+      //     id: "123",
+      //     data: "NISHA3",
+      //     value: "essnece3"
+      //   }
+      // ]
+      // var valueEssence = Arr3.map((obj) => Object.entries(obj)[2][1]);
+      // console.log(valueEssence);
+
+
+      // Arr3.forEach((Element) => {
+      //   Object.entries(Element[1])
+      // })
+      // // *****************************/
+
+      // ****************************************
+      // let text = "";
+      // newArr2 = Object.entries(Arr3)
+      // var Value = newArr2.map((Element) => {
+      //   return Element[1];
+      // })
+      // console.log(Arr3)
+
+
+
+
+      // console.log(text)
+      // *****************************
+      // newArr2 = Object.entries(Arr3)
+      // newArr2.forEach(element => {
+      //   array.push(element)
+      // });
+      // console.log("for each",array)
+
+
+
+      // **********************map filter reduce*******************
+
+      // arr = [1, 2, 3, 4, 16, 18]
+      // const mapArr = arr.filter(myMapfunction)
+
+      // function myMapfunction(element) {
+      //   return element > 10
+      // }
+      // console.log(mapArr)
+
+      // arr = [1, 2, 3, 4, 16, 18]
+      // const mapArr = arr.map(myMapfunction)
+
+      // function myMapfunction(element) {
+      //   return element > 10;
+      // }
+      // console.log(mapArr)
+
+      // arr = [1, 2, 3, 4, 16, 18]
+      // const filterArr = arr.reduce((accumulator, element) =>
+      //   accumulator += element
+      // )
+      // console.log(filterArr)
+
+
+      // arr = [1, 2, 3, 4, 16, 18]
+      // const filterArr = arr.filter((element) =>
+      //   element > 10).reduce((accumulator, element) =>
+      //     accumulator += element
+      //   )
+      // console.log(filterArr)
+
+      // var arr = [1, 2, 3, 4, 5];
+      // arr.forEach(function (element, indexof) {
+      //   var text;
+
+      //   text += indexof + ": " + element;
+      //   console.log(text)
+      // });
+
+      // // *************************set method in js*************/
+      // const letters = new Set();
+
+      // letters.add("a");
+      // letters.add("b");
+      // letters.add("c");
+      // // console.log(letters, typeof letters)
+      // letters.has("a")
+      // console.log(letters, typeof letters)
+      // letters.delete("a");
+      // // console.log(letters, typeof letters)
+      // letters.clear()
+      // console.log(letters)
+
+      // / ****************typeof set is always  an object****************
+      // let flag = false;
+      arr1 = [5, 7, 8, 9, 4, 2, 1]
+      arr2 = [2, 9, 7,]
+      arr3 = [...arr1, ...arr2]
+      arr4 = new Set([...arr1, ...arr2]);
+      // console.log(arr4)
+      // **************************************************
+      arr1 = [5, 7, 8, 9, 4, 2, 1]
+      arr2 = [2, 9, 7,]
+      arr = [...arr1, ...arr2]
+
+
+
+      function removeDuplicates(arr) {
+        let uniqueArr = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (!uniqueArr.includes(arr[i])) {
+            uniqueArr.push(arr[i]);
+          }
+        }
+        return uniqueArr;
+      }
+      removeDuplicates(arr)
+      console.log("heloo", removeDuplicates(arr))
+
+      // ***************************number even-odd in array that input by an input feild
+      function show() {
+        number = document.getElementById("input-number").value.split(",");
+        let ans = [];
+        for (var i = 0; i < number.length; i++) {
+          if (number[i] % 2 == 0) {
+            ans += number[i] + ",";
+          }
+        }
+        document.getElementById("answer").innerHTML = "ans=" + ans;
+      }
+
+
+    </script>
+
+  </body>
+
+</html>

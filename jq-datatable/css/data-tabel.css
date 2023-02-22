@@ -1,0 +1,16 @@
+th, td,tr, table {
+    border-collapse: collapse;
+    padding: 20px;
+    border: 1px solid red;
+    text-align: center;
+}
+.box-table{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0;
+}
+tr:nth-child(even){
+    background: gray  ;
+}
